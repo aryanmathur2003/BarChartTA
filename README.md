@@ -1,7 +1,5 @@
 # BarChartTA
 
-# ShortingInterest
-
 ## Background
 
 BarChart consists of stock data for traders to view resistance and support data. The data is updated in real time constantly with a minimal delay for last price. Using this data can be vital in making trade decisions and help in understanding the next plays and levels to watch for each of the listed stocks.
