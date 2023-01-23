@@ -110,6 +110,11 @@ def BARchart(ticker):
     lowThird = low3[1].split('},', 1)[0]
     print("52 Week Low: " + lowThird)
 
+    # Last Price
+    last = cheatString.split("\"labelSupportResistance\":\"Last\",\"labelTurningPoints\":\"Last\",\"category\":\"showAlways\",\"class\":\"current\",\"rawValue\":")
+    # print(support1[1])
+    last1 = last[1].split('},', 1)[0]
+    print("Last Price: " + last1)
 
 if __name__ == "__main__":
     tickers = ["MSFT", "NVDA", "GOOGL"]
