@@ -117,7 +117,7 @@ def BARchart(ticker):
     print("Last Price: " + last1)
 
 if __name__ == "__main__":
-    tickers = ["MSFT", "NVDA", "GOOGL"]
+    tickers = ["MSFT", "NVDA", "GOOGL", "SPY", "QQQ"]
     for t in tickers:
         print("Stock Ticker: " + t)
         BARchart(t)
