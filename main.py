@@ -12,7 +12,7 @@ def BARchart(ticker):
     # gets graph of cheat sheet and creates string with data
     cheat_sheet = soup.find_all("div", {"class": "bc-cheat-sheet"})
     cheatString = str(cheat_sheet)
-    #print(cheatString)
+    print(cheatString)
 
     #
     # Resistance of stock 1, 2, 3
@@ -37,12 +37,18 @@ def BARchart(ticker):
     resistanceFirst = resistance1[1].split('},', 1)[0]
     print("Resistance Level 1: " + resistanceFirst)
 
+    # #
+    # # pivot point
+    # #
+    # pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"high pivot-points\",\"rawValue\":")
+    # print(len(pivot))
+    # if pivot[1]:
+    #         pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"low pivot-points\",\"rawValue\":")
+    #         print("Check")
     #
-    # pivot point
+    # pp = pivot[1].split('},', 1)[0]
     #
-    pivotpoint = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"low pivot-points\",\"rawValue\":")
-    pp = pivotpoint[1].split('},', 1)[0]
-    print("Pivot Point: " + pp)
+    # print("Pivot Point: " + pp)
 
     #
     # Support levels 1, 2 and 3
