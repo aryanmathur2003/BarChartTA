@@ -40,15 +40,19 @@ def BARchart(ticker):
     # #
     # # pivot point
     # #
-    # pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"high pivot-points\",\"rawValue\":")
-    # print(len(pivot))
-    # if pivot[1]:
-    #         pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"low pivot-points\",\"rawValue\":")
-    #         print("Check")
-    #
-    # pp = pivot[1].split('},', 1)[0]
-    #
-    # print("Pivot Point: " + pp)
+    pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"high pivot-points\",\"rawValue\":")
+    try:
+        pp = pivot[1]
+        pp = pp.split('},', 1)[0]
+    except:
+        pivot = cheatString.split("\"labelTurningPoints\":\"Pivot Point\",\"category\":\"pivots\",\"class\":\"low pivot-points\",\"rawValue\":")
+        try:
+            pp = pivot[1]
+            pp = pp.split('},', 1)[0]
+        except:
+            print("Error")
+
+    print("Pivot Point: " + pp)
 
     #
     # Support levels 1, 2 and 3
