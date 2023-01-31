@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 def BARchart(ticker):
     url = "https://www.barchart.com/stocks/quotes/"+ ticker +"/cheat-sheet"
     url2 = "https://www.barchart.com/stocks/quotes/NVDA/cheat-sheet"
